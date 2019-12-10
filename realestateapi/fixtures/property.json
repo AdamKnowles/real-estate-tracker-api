@@ -1,0 +1,32 @@
+[
+  {
+    "model": "realestateapi.property",
+    "pk": 1,
+    "fields": {
+      "title": "Beautiful 2 bed 2 bath",
+      "address": "123 oldtown way",
+      "year_built": 2019,
+      "price": 100000,
+      "square_feet": 2500,
+      "bedroom_count": 2,
+      "bathroom_count": 2,
+      "has_basement": "False",
+      "date_listed": "2019-12-12"
+    }
+  },
+  {
+    "model": "realestateapi.property",
+    "pk": 2,
+    "fields": {
+      "title": "Beautiful 4 bed 4 bath",
+      "address": "444 oldtown way",
+      "year_built": 2019,
+      "price": 400000,
+      "square_feet": 4000,
+      "bedroom_count": 4,
+      "bathroom_count": 4,
+      "has_basement": "True",
+      "date_listed": "2019-12-7"
+    }
+  }
+]
