@@ -1,5 +1,13 @@
 from django.db import models
 from datetime import date
+import locale
+
+
+
+
+
+
+locale.setlocale(locale.LC_ALL, '')
 
 
 
@@ -39,7 +47,7 @@ class Property(models.Model):
 
         todays_date = date(listed_year, listed_month, listed_day)
         date_in_database = date(current_year, current_month, current_day)
-        
+
         total_days = date_in_database - todays_date
         
         return total_days.days
@@ -48,9 +56,17 @@ class Property(models.Model):
 
         price = Property.objects.get(pk=self.pk)
 
-        price_per_square_foot = price.price / price.square_feet
+        price_per_square_foot = round(price.price / price.square_feet)
 
         return price_per_square_foot
+
+    def price_with_commas(self):
+        price = Property.objects.get(pk=self.pk)
+        price_with_commas = format(price.price, "n")
+
+        return price_with_commas
+
+    
 
 
 
