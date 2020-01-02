@@ -15,7 +15,7 @@ class PropertySerializer(serializers.HyperlinkedModelSerializer):
             view_name='properties',
             lookup_field='id'
         )
-        fields = ('id', 'title', 'address', 'year_built', 'price', 'square_feet', 'bedroom_count', 'bathroom_count', 'has_basement', 'date_listed', 'days_listed', 'price_per_square_foot')
+        fields = ('id', 'title', 'address', 'year_built', 'price', 'square_feet', 'bedroom_count', 'bathroom_count', 'has_basement', 'date_listed', 'days_listed', 'price_per_square_foot', 'price_with_commas')
 
 class Properties(ViewSet):
 
